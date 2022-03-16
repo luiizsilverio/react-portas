@@ -1,21 +1,42 @@
+import PortaModel from "../model/porta"
 import styles from "../styles/Porta.module.css"
 
-type PortaProps = {
-  selecionada?: boolean
+interface PortaProps {
+  value: PortaModel
+  onChange (newPorta: PortaModel): void
 }
 
 export default function Porta(props: PortaProps) {
-  const sel = props.selecionada ? styles.selecionada : ''
+  const porta = props.value
+  const sel = porta.selecionada ? styles.selecionada : ''
+
+  const alternarSelecao = (e) => props.onChange(porta.alternarSelecao())
+
+  const abrir = (ev) => {
+    ev.stopPropagation()
+    props.onChange(porta.abrir())
+  }
+
+  function renderizarPorta() {
+    return (
+      <div className={styles.porta}>
+        <div className={styles.numero}>{porta.numero}</div>
+        <div
+          className={styles.macaneta}
+          onClick={abrir}
+        ></div>
+      </div>
+    )
+  }
 
   return (
-    <div className={styles.area}>
+    <div className={styles.area} onClick={alternarSelecao}>
       <div className={`${styles.estrutura} ${sel}`}>
-        <div className={styles.porta}>
-          <div className={styles.numero}>3</div>
-          <div className={styles.macaneta}></div>
-        </div>
+        {
+          !porta.aberta && renderizarPorta()
+        }
+        <div className={styles.chao}></div>
       </div>
-      <div className={styles.chao}></div>
     </div>
   )
 }
