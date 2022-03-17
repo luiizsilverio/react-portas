@@ -8,7 +8,7 @@ interface PortaProps {
 
 export default function Porta(props: PortaProps) {
   const porta = props.value
-  const sel = porta.selecionada ? styles.selecionada : ''
+  const sel = porta.selecionada && !porta.aberta ? styles.selecionada : ''
 
   const alternarSelecao = (e) => props.onChange(porta.alternarSelecao())
 

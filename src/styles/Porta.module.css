@@ -12,6 +12,9 @@
   display: flex;
   flex-grow: 1;
   width: 90%;
+  border: 5px solid brown;
+  border-bottom: none;
+  background-color: #0005;
 }
 
 .porta {
@@ -21,8 +24,6 @@
   flex-grow: 1;
 
   background-color: chocolate;
-  border: 5px solid brown;
-  border-bottom: none;
   padding: 15px;
 }
 
@@ -46,7 +47,7 @@
   top: 45%;
 }
 
-.selecionada .porta {
+.selecionada {
   border: 5px solid #ffd000;
   border-bottom: none;
 }
