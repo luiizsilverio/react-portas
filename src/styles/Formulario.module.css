@@ -1,8 +1,13 @@
 .formulario {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.formulario > div {
+  display: flex;
 }
 
 .link {
@@ -12,4 +17,9 @@
   flex: 1;
   margin: 0;
   cursor: pointer;
+  /* transition: 0.2s; */
+}
+
+.link:active {
+  transform: scale(1.05);
 }

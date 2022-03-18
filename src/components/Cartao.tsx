@@ -8,7 +8,8 @@ interface CartaoProps {
 
 export default function Cartao(props: CartaoProps) {
   return (
-    <div className={styles.cartao}
+    <div
+      className={styles.cartao}
       style={{
         background: props.bgColor ?? "#fff"
       }}
