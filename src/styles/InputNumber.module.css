@@ -37,5 +37,5 @@
 
 .btn:active {
   transform: scale(1.06);
-  color: navy;
+  color: blue;
 }

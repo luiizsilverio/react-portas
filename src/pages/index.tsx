@@ -40,7 +40,7 @@ export default function Formulario() {
             />
           </Cartao>
           <Cartao bgColor="#28a058">
-            <Link href={`/jogo/${ qtdPortas }/${ presente }`}>
+            <Link href={`/jogo/${ qtdPortas }/${ presente }`} passHref>
               <h2 className={styles.link}>Iniciar</h2>
             </Link>
           </Cartao>
