@@ -20,6 +20,8 @@ a {
 }
 
 :root {
-  --area-porta-altura: 310px;
-  --area-porta-largura: 200px;
+  /* --area-porta-altura: 310px;
+  --area-porta-largura: 200px; */
+  --area-porta-altura: 270px;
+  --area-porta-largura: 160px;
 }

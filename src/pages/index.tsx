@@ -1,13 +1,9 @@
-import { useState } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import Cartao from '../components/Cartao'
+import styles from '../styles/Formulario.module.css'
 
-import Porta from '../components/Porta'
-import Presente from '../components/Presente'
-import PortaModel from '../model/porta'
-import { atualizarPortas, criarPortas } from '../functions/portas'
-
-export default function Home() {
-
+export default function Formulario() {
   return (
     <>
       <Head>
@@ -16,8 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div style={{display: "flex"}}>
-        <h1>Jogo das Portas</h1>
+      <div className={styles.formulario}>
+        <div>
+          <Cartao bgColor="#c0392c">
+            <h1>Monty Hall</h1>
+          </Cartao>
+          <Cartao></Cartao>
+        </div>
+        <div>
+          <Cartao></Cartao>
+          <Cartao bgColor="#28a058">
+            <Link href={`/jogo/4/2`}>
+              <h2 className={styles.link}>Iniciar</h2>
+            </Link>
+          </Cartao>
+        </div>
       </div>
     </>
   )

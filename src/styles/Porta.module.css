@@ -28,6 +28,14 @@
   padding: 15px;
 }
 
+.porta:hover {
+  filter: brightness(.94);
+}
+
+.porta:hover .numero{
+  transform: scale(1.1);
+}
+
 .numero {
   font-size: 3rem;
 }
