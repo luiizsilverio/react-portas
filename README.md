@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><img src="https://github.com/luiizsilverio/react-portas/blob/main/public/door.png" /></td>
+    <td><img src="https://github.com/luiizsilverio/react-portas/blob/main/public/door.png" style='color: "red"'/></td>
     <td><h1>Jogo das Portas</h1></td>
   </tr>
 </table>
